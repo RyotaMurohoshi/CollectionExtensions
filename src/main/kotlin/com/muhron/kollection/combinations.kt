@@ -26,8 +26,8 @@ fun <T> combinations(vararg listOfList: List<T>): List<List<T>> {
     return listOfList.fold(
             initial = listOf(emptyList<T>()),
             operation = { accumulateListOfList: List<List<T>>, elementList: List<T> ->
-                elementList.flatMap { element: T ->
-                    accumulateListOfList.map { list -> list + element }
+                accumulateListOfList.flatMap { list: List<T> ->
+                    elementList.map { element: T -> list + element }
                 }
             }
     )
