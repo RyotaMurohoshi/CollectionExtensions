@@ -193,16 +193,3 @@ class CombinationsTest {
     }
 }
 
-enum class Attribute {
-    Smile,
-    Pure,
-    Cool
-}
-
-val names = listOf("Honoka", "Eli", "Kotori", "Umi", "Rin", "Maki", "Nozomi", "Hanayo", "Nico")
-
-enum class Rank {
-    R,
-    SR,
-    UR
-}
