@@ -41,3 +41,28 @@ val persons: List<Person> = listOf(
         Person(PersonId(9), "Alisa", UnitsId(-1)),
         Person(PersonId(10), "Yukiho", UnitsId(-1))
 )
+
+data class Complex(val real: Double, val imaginary: Double) {
+    operator fun plus(that: Complex): Complex = Complex(this.real + that.real, this.imaginary + that.imaginary)
+    operator fun times(that: Complex): Complex {
+        val (a, b) = this
+        val (c, d) = that
+        return Complex(a * c - b * d, a * d + b * c)
+    }
+}
+
+enum class Direction {
+    Up,
+    Right,
+    Down,
+    Left
+}
+
+data class Point(val x: Int, val y: Int) {
+    fun move(direction: Direction): Point = when (direction) {
+        Direction.Up -> Point(x, y + 1)
+        Direction.Right -> Point(x + 1, y)
+        Direction.Down -> Point(x, y - 1)
+        Direction.Left -> Point(x - 1, y)
+    }
+}
