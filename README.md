@@ -1,4 +1,4 @@
-# Kollection (Beta)
+# Kollection (Beta) [![Circle CI](https://circleci.com/gh/RyotaMurohoshi/Kollection/tree/master.svg?style=shield)](https://circleci.com/gh/RyotaMurohoshi/Kollection/tree/master)
 
 Collection extension for Kotlin from other languages.
 
