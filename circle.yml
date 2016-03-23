@@ -1,0 +1,13 @@
+general:
+  artifacts:
+    - build/reports
+
+machine:
+  java:
+    version: oraclejdk8
+  timezone:
+    Asia/Tokyo
+
+test:
+  override:
+    - ./gradlew test
