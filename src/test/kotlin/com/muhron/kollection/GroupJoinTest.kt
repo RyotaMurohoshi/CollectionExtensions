@@ -1,5 +1,6 @@
 package com.muhron.kollection
 
+import com.taroid.knit.should
 import org.junit.Assert
 import org.junit.Test
 
@@ -34,7 +35,7 @@ class GroupJoinTest {
                 ))
         )
 
-        Assert.assertEquals(expected, actual)
+        actual.should be expected
     }
 
     @Test
@@ -60,6 +61,6 @@ class GroupJoinTest {
                 PersonViewModel("Yukiho", "")
         )
 
-        Assert.assertEquals(expected, actual)
+        actual.should be expected
     }
 }

@@ -2,6 +2,7 @@ package com.muhron.kollection
 
 import com.muhron.kollection.Attribute.*
 import com.muhron.kollection.Rank.*
+import com.taroid.knit.should
 import org.junit.Assert
 import org.junit.Test
 
@@ -38,7 +39,8 @@ class CombinationsTest {
                 "Nico" to Pure,
                 "Nico" to Cool
         )
-        Assert.assertEquals(expected, actual)
+
+        actual.should be expected
     }
 
     @Test
@@ -129,15 +131,17 @@ class CombinationsTest {
                 Triple("Nico", Cool, SR),
                 Triple("Nico", Cool, UR)
         )
-        Assert.assertEquals(expected, actual)
+
+        actual.should be expected
     }
 
     @Test
     fun testCombinationsPairEmpty() {
         val emptyList = emptyList<Pair<String, Attribute>>()
-        Assert.assertEquals(emptyList, combinations(names, emptyList<Attribute>()))
-        Assert.assertEquals(emptyList, combinations(emptyList<String>(), Attribute.values().toList()))
-        Assert.assertEquals(emptyList, combinations(emptyList<String>(), emptyList<Attribute>()))
+
+        combinations(names, emptyList<Attribute>()).should be emptyList
+        combinations(emptyList<String>(), Attribute.values().toList()).should be emptyList
+        combinations(emptyList<String>(), emptyList<Attribute>()).should be emptyList
     }
 
     @Test
@@ -150,13 +154,13 @@ class CombinationsTest {
         val emptyAttributes = emptyList<Attribute>()
         val emptyRanks = emptyList<Rank>()
 
-        Assert.assertEquals(emptyList, combinations(names, attributes, emptyRanks))
-        Assert.assertEquals(emptyList, combinations(names, emptyAttributes, ranks))
-        Assert.assertEquals(emptyList, combinations(names, emptyAttributes, emptyRanks))
-        Assert.assertEquals(emptyList, combinations(emptyNames, attributes, ranks))
-        Assert.assertEquals(emptyList, combinations(emptyNames, attributes, emptyRanks))
-        Assert.assertEquals(emptyList, combinations(emptyNames, emptyAttributes, ranks))
-        Assert.assertEquals(emptyList, combinations(emptyNames, emptyAttributes, emptyRanks))
+        combinations(names, attributes, emptyRanks).should be emptyList
+        combinations(names, emptyAttributes, ranks).should be emptyList
+        combinations(names, emptyAttributes, emptyRanks).should be emptyList
+        combinations(emptyNames, attributes, ranks).should be emptyList
+        combinations(emptyNames, attributes, emptyRanks).should be emptyList
+        combinations(emptyNames, emptyAttributes, ranks).should be emptyList
+        combinations(emptyNames, emptyAttributes, emptyRanks).should be emptyList
     }
 
     @Test
@@ -166,7 +170,8 @@ class CombinationsTest {
         val listC = listOf("good", "bad")
         val listD = listOf(".", "!")
 
-        Assert.assertEquals(listOf(
+        val actual = combinations(listA, listB, listC, listD)
+        val expected = listOf(
                 listOf("This", "is", "good", "."),
                 listOf("This", "is", "good", "!"),
                 listOf("This", "is", "bad", "."),
@@ -174,9 +179,10 @@ class CombinationsTest {
                 listOf("That", "is", "good", "."),
                 listOf("That", "is", "good", "!"),
                 listOf("That", "is", "bad", "."),
-                listOf("That", "is", "bad", "!")),
-                combinations(listA, listB, listC, listD)
+                listOf("That", "is", "bad", "!")
         )
+
+        actual.should be expected
     }
 
     @Test
@@ -186,10 +192,10 @@ class CombinationsTest {
         val listC = listOf("good", "bad")
         val listD = emptyList<String>()
 
-        Assert.assertEquals(
-                emptyList<String>(),
-                combinations(listA, listB, listC, listD)
-        )
+        val actual = combinations(listA, listB, listC, listD)
+        val expected = emptyList<List<String>>()
+
+        actual.should be expected
     }
 }
 
