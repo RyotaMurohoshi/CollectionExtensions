@@ -2,6 +2,15 @@
 
 Collection extension for Kotlin from other languages.
 
+# Methods
+
+* buffer
+* groupJoin
+* repeat
+* combinations
+* join
+* scan
+
 # Author
 Ryota Murohoshi is game Programmer and C#er in Japan.
 
