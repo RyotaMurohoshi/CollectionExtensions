@@ -2,6 +2,15 @@
 
 ほかの言語を参考にしたKotlinのコレクション拡張です。
 
+# メソッドリスト
+
+* buffer
+* groupJoin
+* repeat
+* combinations
+* join
+* scan
+
 # 作者
 
 室星亮太
