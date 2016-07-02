@@ -66,3 +66,25 @@ data class Point(val x: Int, val y: Int) {
         Direction.Left -> Point(x - 1, y)
     }
 }
+
+enum class MonsterType{
+    Grass,
+    Fire,
+    Water,
+    Flying,
+    Poison
+}
+
+data class Monster(val number:Int, val name:String, val types:List<MonsterType>)
+
+val monsters = listOf(
+        Monster(number = 1, name = "フシギナターネ", types = listOf(MonsterType.Grass, MonsterType.Poison)),
+        Monster(number = 2, name = "フシギナソーウ", types = listOf(MonsterType.Grass, MonsterType.Poison)),
+        Monster(number = 3, name = "フシギナハーナ", types = listOf(MonsterType.Grass, MonsterType.Poison)),
+        Monster(number = 4, name = "ヒノトカゲ", types = listOf(MonsterType.Fire)),
+        Monster(number = 5, name = "リザーノ", types = listOf(MonsterType.Fire)),
+        Monster(number = 6, name = "リザドーーン", types = listOf(MonsterType.Fire, MonsterType.Flying)),
+        Monster(number = 7, name = "ゼニカーメ", types = listOf(MonsterType.Water)),
+        Monster(number = 8, name = "カメールン", types = listOf(MonsterType.Water)),
+        Monster(number = 9, name = "カメクッスン", types = listOf(MonsterType.Water))
+)
