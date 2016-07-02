@@ -1,4 +1,4 @@
-package com.muhron.kollection
+package com.muhron.collections_extensions
 
 @JvmName("combinationsExtension")
 fun <A, B> List<A>.combinations(listB: List<B>): List<Pair<A, B>> =

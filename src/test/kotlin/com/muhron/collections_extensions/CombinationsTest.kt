@@ -1,7 +1,7 @@
-package com.muhron.kollection
+package com.muhron.collections_extensions
 
-import com.muhron.kollection.Attribute.*
-import com.muhron.kollection.Rank.*
+import com.muhron.collections_extensions.Attribute.*
+import com.muhron.collections_extensions.Rank.*
 import com.taroid.knit.should
 import org.junit.Assert
 import org.junit.Test

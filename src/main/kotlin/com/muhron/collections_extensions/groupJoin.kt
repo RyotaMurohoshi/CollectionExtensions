@@ -1,4 +1,4 @@
-package com.muhron.kollection
+package com.muhron.collections_extensions
 
 fun <TOuter, TInner, TKey, TResult> List<TOuter>.groupJoin(
         inner: List<TInner>,

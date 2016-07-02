@@ -1,4 +1,4 @@
-package com.muhron.kollection
+package com.muhron.collections_extensions
 
 fun <T> repeat(value: T): Sequence<T> = Sequence {
     object : Iterator<T> {
