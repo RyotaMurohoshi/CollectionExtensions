@@ -1,4 +1,4 @@
-package com.muhron.kollection
+package com.muhron.collections_extensions
 
 enum class Attribute {
     Smile,

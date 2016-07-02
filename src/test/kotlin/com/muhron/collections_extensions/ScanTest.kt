@@ -1,6 +1,6 @@
-package com.muhron.kollection
+package com.muhron.collections_extensions
 
-import com.muhron.kollection.Direction.*
+import com.muhron.collections_extensions.Direction.*
 import com.taroid.knit.should
 import org.junit.Assert
 import org.junit.Test

@@ -1,4 +1,4 @@
-package com.muhron.kollection
+package com.muhron.collections_extensions
 
 fun <TSource, TAccumulate> List<TSource>.scan(
         seed: TAccumulate, accumulator: (TAccumulate, TSource) -> TAccumulate): List<TAccumulate>
