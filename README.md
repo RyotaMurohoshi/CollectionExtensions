@@ -5,10 +5,11 @@ Collection extension for Kotlin from other languages.
 # Methods
 
 * buffer
-* groupJoin
-* repeat
 * combinations
+* groupJoin
 * join
+* multiGroupBy
+* repeat
 * scan
 
 # Author
