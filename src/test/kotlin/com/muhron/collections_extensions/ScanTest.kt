@@ -1,7 +1,6 @@
 package com.muhron.collections_extensions
 
 import com.muhron.collections_extensions.Direction.*
-import com.taroid.knit.should
 import org.junit.Assert
 import org.junit.Test
 
@@ -10,21 +9,21 @@ class ScanTest {
     fun testTSource() {
         val actual = listOf(1, 2, 3, 4, 5).scan { acc: Int, elem: Int -> acc + elem }
         val expected = listOf(3, 6, 10, 15)
-        actual.should be expected
+        Assert.assertEquals(expected, actual)
     }
 
     @Test
     fun testTSourceSingle() {
         val actual = listOf(1).scan { acc: Int, elem: Int -> acc + elem }
         val expected = emptyList<Int>()
-        actual.should be expected
+        Assert.assertEquals(expected, actual)
     }
 
     @Test
     fun testTSourceEmpty() {
         val actual = emptyList<Int>().scan { acc: Int, elem: Int -> acc + elem }
         val expected = emptyList<Int>()
-        actual.should be expected
+        Assert.assertEquals(expected, actual)
     }
 
     @Test
@@ -46,7 +45,7 @@ class ScanTest {
                 Point(0, 0)
         )
 
-        actual.should be expected
+        Assert.assertEquals(expected, actual)
     }
 
     @Test
@@ -57,7 +56,7 @@ class ScanTest {
 
         val expected = listOf(Point(0, 1))
 
-        actual.should be expected
+        Assert.assertEquals(expected, actual)
     }
 
     @Test
@@ -68,6 +67,6 @@ class ScanTest {
 
         val expected = emptyList<Point>()
 
-        actual.should be expected
+        Assert.assertEquals(expected, actual)
     }
 }

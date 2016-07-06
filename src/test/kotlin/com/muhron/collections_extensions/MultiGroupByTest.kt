@@ -1,6 +1,6 @@
 package com.muhron.collections_extensions
 
-import com.taroid.knit.should
+import org.junit.Assert
 import org.junit.Test
 
 class MultiGroupByTest {
@@ -35,6 +35,6 @@ class MultiGroupByTest {
                 )
         )
 
-        actual.should be expected
+        Assert.assertEquals(expected, actual)
     }
 }

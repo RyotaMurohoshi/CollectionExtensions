@@ -5,10 +5,11 @@
 # メソッドリスト
 
 * buffer
-* groupJoin
-* repeat
 * combinations
+* groupJoin
 * join
+* multiGroupBy
+* repeat
 * scan
 
 # 作者
