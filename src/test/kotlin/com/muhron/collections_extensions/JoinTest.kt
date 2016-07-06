@@ -27,7 +27,7 @@ class JoinTest {
                 PersonViewModel("Niko", "BiBi")
         )
 
-        actual.should be expected
+        Assert.assertEquals(expected, actual)
     }
 
     @Test
